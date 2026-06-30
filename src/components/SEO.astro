@@ -18,6 +18,7 @@ const {
 } = Astro.props;
 
 const url = canonical ?? Astro.url.href;
+const imageUrl = new URL(image, Astro.site ?? Astro.url).href;
 ---
 
 <meta charset="utf-8" />
@@ -39,9 +40,9 @@ const url = canonical ?? Astro.url.href;
 {description && <meta property="og:description" content={description} />}
 <meta property="og:type" content="website" />
 <meta property="og:url" content={url} />
-<meta property="og:image" content={image} />
+<meta property="og:image" content={imageUrl} />
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={title} />
 {description && <meta name="twitter:description" content={description} />}
-<meta name="twitter:image" content={image} />
+<meta name="twitter:image" content={imageUrl} />
