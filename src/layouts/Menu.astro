@@ -1,5 +1,9 @@
 ---
 import Card from '../components/Card.astro';
+
+import plate1 from '../assets/plate1.png';
+import plate2 from '../assets/plate1.png';
+import plate3 from '../assets/plate1.png';
 ---
 <section class="flex flex-col bg-zinc-950/95 justify-center">
     <div class="container flex flex-col w-11/12 max-w-6xl gap-8 mx-auto py-32">
@@ -10,13 +14,13 @@ import Card from '../components/Card.astro';
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Card title="Aged Wagyu Filet" description="Dry-aged for 28 days, glazed with pomegranate molasses and Aleppo pepper. Served over charred heirloom leeks." price="$42.00" backgroundImage={{ src: "./src/assets/plate1.png", alt: "The Kabob Guy Logo" }} />
+            <Card title="Aged Wagyu Filet" description="Dry-aged for 28 days, glazed with pomegranate molasses and Aleppo pepper. Served over charred heirloom leeks." price="$42.00" backgroundImage={{ src: plate1.src, alt: 'plate 1'}} />
     
-            <Card title="Our Heritage" description="Persian saffron marinade, mint gremolata, and fire-roasted cherry tomatoes." price="$29.99" backgroundImage={{ src: "./src/assets/plate2.png", alt: "The Kabob Guy Logo" }} />
+            <Card title="Our Heritage" description="Persian saffron marinade, mint gremolata, and fire-roasted cherry tomatoes." price="$29.99" backgroundImage={{src: plate2.src, alt: 'plate 2'}} />
     
-            <Card title="Lonian Sea Harvest" description="Colossal prawns and diver scallops, lemon-oregano butter, smoked paprika." price="$48.00" backgroundImage={{ src: "./src/assets/plate3.png", alt: "The Kabob Guy Logo" }} />
+            <Card title="Lonian Sea Harvest" description="Colossal prawns and diver scallops, lemon-oregano butter, smoked paprika." price="$48.00" backgroundImage={{ src: plate3.src, alt: 'plate 3'}} />
     
-            <Card title="Saffron Lamb Loin" description="Persian saffron marinade, mint gremolata, and fire-roasted cherry tomatoes." price="$29.99" backgroundImage={{ src: "./src/assets/plate1.png", alt: "The Kabob Guy Logo" }} />
+            <Card title="Saffron Lamb Loin" description="Persian saffron marinade, mint gremolata, and fire-roasted cherry tomatoes." price="$29.99" backgroundImage={{ src: plate2.src, alt: 'plate 2'}} />
         </div>
         
     </div>
