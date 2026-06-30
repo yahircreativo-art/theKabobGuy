@@ -24,7 +24,9 @@ const {
 } = Astro.props;
 ---
 
-<div class=" flex flex-col border border-zinc-800 overflow-hidden justify-between h-full shadow-lg">
+<div class="flex flex-col border border-zinc-800 overflow-hidden justify-between h-full shadow-lg 
+
+card-fade opacity-0 translate-y-8 transition-all duration-1000 ease-out">
     <img
         src={backgroundImage?.src}
         alt={backgroundImage?.alt}

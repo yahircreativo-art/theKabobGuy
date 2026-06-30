@@ -3,17 +3,41 @@ import Button from './Button.astro';
 import logoWeb from '../assets/logoWeb.png'
 ---
 
-<header class="fixed w-full top-0 z-50 bg-black/50 backdrop-blur-sm">
-    <nav class="">
-        <div class="container max-w-6xl flex items-center justify-between mx-auto px-4 pb-4 pt-12">
-            <a href="/"><img src={logoWeb.src} alt="The Kabob Guy Logo" class="h-10 w-auto" /></a>
-            <!-- <ul class="flex space-x-4 items-center">
+<header class="fixed w-full top-0 z-50 bg-black/60 backdrop-blur-sm">
+    <nav>
+        <input id="nav-toggle" type="checkbox" class="peer sr-only" />
+
+        <div class="container max-w-6xl mx-auto flex items-center justify-between px-4 py-4">
+            <a href="/" class="flex items-center">
+                <img src={logoWeb.src} alt="The Kabob Guy Logo" class="h-10 w-auto" />
+            </a>
+
+            <div class="flex items-center gap-4 md:hidden">
+                <label for="nav-toggle" class="inline-flex h-10 w-10 flex-col items-center justify-center space-y-1.5 cursor-pointer text-zinc-100 transition hover:border-amber-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300">
+                    <span class="sr-only">Abrir menú</span>
+                    <span class="block h-0.5 w-6 bg-zinc-100 transition-transform duration-200 peer-checked:translate-y-1.5 peer-checked:rotate-45"></span>
+                    <span class="block h-0.5 w-6 bg-zinc-100 transition-opacity duration-200 peer-checked:opacity-0"></span>
+                    <span class="block h-0.5 w-6 bg-zinc-100 transition-transform duration-200 peer-checked:-translate-y-1.5 peer-checked:-rotate-45"></span>
+                </label>
+            </div>
+
+            <ul class="hidden items-center gap-4 md:flex">
                 <li><a href="/menu" class="text-zinc-50 hover:text-amber-300">Menu</a></li>
                 <li><a href="/about" class="text-zinc-50 hover:text-amber-300">About</a></li>
                 <li><a href="/contacto" class="text-zinc-50 hover:text-amber-300">Gallery</a></li>
                 <li><a href="/contacto" class="text-zinc-50 hover:text-amber-300">Reservations</a></li>
                 <Button label="Contact" href="/contact" />
-            </ul> -->
+            </ul>
+        </div>
+
+        <div class="absolute inset-x-0 top-full z-40 block overflow-hidden max-h-0 opacity-0 scale-y-95 bg-black/60 px-4 py-0 transition-[max-height,opacity,transform] duration-300 ease-out md:hidden peer-checked:max-h-[20rem] peer-checked:opacity-100 peer-checked:scale-y-100 peer-checked:py-4">
+            <ul class="flex flex-col gap-3">
+                <li><a href="/menu" class="block rounded-lg px-3 py-2 text-zinc-50 hover:bg-zinc-900 hover:text-amber-300">Menu</a></li>
+                <li><a href="/about" class="block rounded-lg px-3 py-2 text-zinc-50 hover:bg-zinc-900 hover:text-amber-300">About</a></li>
+                <li><a href="/contacto" class="block rounded-lg px-3 py-2 text-zinc-50 hover:bg-zinc-900 hover:text-amber-300">Gallery</a></li>
+                <li><a href="/contacto" class="block rounded-lg px-3 py-2 text-zinc-50 hover:bg-zinc-900 hover:text-amber-300">Reservations</a></li>
+                <li><Button label="Contact" href="/contact" /> </li>
+            </ul>
         </div>
     </nav>
 </header>
