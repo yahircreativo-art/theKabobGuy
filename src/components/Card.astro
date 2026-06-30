@@ -1,0 +1,45 @@
+---
+import Button from '../components/Button.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  price: string;
+  button?: {
+    label: string;
+    href: string;
+    };
+    backgroundImage?: {
+      src: string;
+      alt: string;
+    }
+}
+const {
+    title,
+    description,
+    button,
+    backgroundImage,
+    price
+} = Astro.props;
+---
+
+<div class=" flex flex-col border border-zinc-800 overflow-hidden justify-between h-full shadow-lg">
+    <img
+        src={backgroundImage?.src}
+        alt={backgroundImage?.alt}
+        class="w-full h-full object-cover object-center"
+    />
+    <div class="flex flex-col gap-4 p-4 bg-zinc-900">
+
+        <div class="flex flex-row gap-4 items-center">
+            <h2 class="text-amber-300 text-2xl font-medium">{title}</h2>
+            <span class="text-zinc-300 text-lg font-medium">{price}</span>
+        </div>
+        <p class="text-zinc-300 font-light">{description}</p>
+        <div class="flex flex-row">
+            {button && (
+                <Button label={button.label} href={button.href} />
+            )}
+        </div>
+    </div>
+</div>

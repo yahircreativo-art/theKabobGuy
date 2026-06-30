@@ -1,0 +1,23 @@
+---
+import Card from '../components/Card.astro';
+---
+<section class="flex flex-col bg-zinc-950/95 justify-center">
+    <div class="container flex flex-col w-11/12 max-w-6xl gap-8 mx-auto py-32">
+
+        <div class="flex flex-col gap-4">
+            <h2 class="text-center text-3xl font-medium text-zinc-50">The Fire-Forged Collection</h2>
+            <p class="text-center text-zinc-300">Signatura skewers crafted for the discerning palate.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <Card title="Aged Wagyu Filet" description="Dry-aged for 28 days, glazed with pomegranate molasses and Aleppo pepper. Served over charred heirloom leeks." price="$42.00" backgroundImage={{ src: "./src/assets/plate1.png", alt: "The Kabob Guy Logo" }} />
+    
+            <Card title="Our Heritage" description="Persian saffron marinade, mint gremolata, and fire-roasted cherry tomatoes." price="$29.99" backgroundImage={{ src: "./src/assets/plate2.png", alt: "The Kabob Guy Logo" }} />
+    
+            <Card title="Lonian Sea Harvest" description="Colossal prawns and diver scallops, lemon-oregano butter, smoked paprika." price="$48.00" backgroundImage={{ src: "./src/assets/plate3.png", alt: "The Kabob Guy Logo" }} />
+    
+            <Card title="Saffron Lamb Loin" description="Persian saffron marinade, mint gremolata, and fire-roasted cherry tomatoes." price="$29.99" backgroundImage={{ src: "./src/assets/plate1.png", alt: "The Kabob Guy Logo" }} />
+        </div>
+        
+    </div>
+</section>
