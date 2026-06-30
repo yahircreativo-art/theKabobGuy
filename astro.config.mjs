@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
+import github from "@astrojs/github-pages";
 
 export default defineConfig({
     vite: {
@@ -10,5 +11,5 @@ export default defineConfig({
         enabled:false
     },
     site: 'https://yahircreativo-art',
-    base: '/theKabobGuy',
+    adapter: github(),
 });
