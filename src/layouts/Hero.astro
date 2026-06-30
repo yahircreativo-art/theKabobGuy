@@ -1,15 +1,23 @@
 ---
 import Button from '../components/Button.astro';
 import backgroundImage from '../assets/background.webp';
+import sloganImage from '../assets/slogan.png';
 ---
 
 <section
   style={`background-image: url(${backgroundImage.src});`}
-  class="bg-cover min-h-screen bg-center bg-no-repeat flex items-center justify-center"
+  class="relative bg-cover min-h-screen bg-center bg-no-repeat flex items-center justify-center"
 >
- <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black"></div>
-  <div class="container mx-auto flex flex-col gap-4 px-4 py-16  text-center text-zinc-50 z-10">
-    <div><img src="./src/assets/slogan.png" alt="SLogan the kabob guy" class=" h-auto w-auto max-h-96 mx-auto " /></div>
+  <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black"></div>
+
+  <div class="container mx-auto flex flex-col gap-4 px-4 py-16 text-center text-zinc-50 z-10">
+    <div>
+      <img
+        src={sloganImage.src}
+        alt="Slogan The Kabob Guy"
+        class="h-auto w-auto max-h-96 mx-auto"
+      />
+    </div>
 
     <Button label="BOOK YOUR TABLE" href="/contacto" />
   </div>
