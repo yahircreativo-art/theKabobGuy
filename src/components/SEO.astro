@@ -1,4 +1,6 @@
 ---
+import card from '../assets/card.webp';
+
 interface Props {
   title: string;
   description?: string;
@@ -11,7 +13,7 @@ const {
   title,
   description,
   canonical,
-  image = "https://yahircreativo-art.github.io/theKabobGuy/card.webp",
+  image = card.src,
   noindex = false,
 } = Astro.props;
 
