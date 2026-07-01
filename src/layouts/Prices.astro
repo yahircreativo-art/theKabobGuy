@@ -1,0 +1,15 @@
+---
+import CardPrice from '../components/CardPrice.astro';
+---
+
+<section class="flex flex-col items-center py-32 gap-8">
+    <div class="flex flex-col text-center gap-4">
+        <h3 class="text-white text-3xl font-semibold">Special Offers</h3>
+        <p class="text-zinc-300 text-center">Discover our exclusive deals and curated selections.</p>
+    </div>
+    <div class="container w-11/12 max-w-6xl flex flex-col sm:grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <CardPrice title="Signature Collection" price="$149.99" description="A curated selection of our signature skewers." options={["Aged Wagyu Filet", "Our Heritage", "Lonian Sea Harvest", "Saffron Lamb Loin", "50 people"]} hasButton={true} buttonLabel="Order Now" />
+        <CardPrice title="Heritage Collection" price="$189.99" description="Perfect for sharing or indulging in a gourmet experience." options={["Aged Wagyu Filet", "Our Heritage", "Lonian Sea Harvest", "Saffron Lamb Loin", "100 people"]} hasButton={true} buttonLabel="Order Now" />
+        <CardPrice title="The Fire-Forged Collection" price="$249.99" description="The ultimate expression of our culinary expertise." options={["Aged Wagyu Filet", "Lonian Sea Harvest", "Saffron Lamb Loin", "200 people"]} hasButton={true} buttonLabel="Order Now" />
+    </div>
+</section>

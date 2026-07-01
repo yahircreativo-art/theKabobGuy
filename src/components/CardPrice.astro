@@ -1,0 +1,38 @@
+---
+import Button from './Button.astro';
+
+interface Props {
+  title: string;
+  price: string;
+  description?: string;
+  options?: string[];
+  hasButton?: boolean;
+  buttonLabel: string;
+}
+const {
+  title,
+  price,
+  description,
+  options = [],
+  hasButton = true,
+  buttonLabel = "Button",
+} = Astro.props;
+---
+
+<div class="card-price flex flex-col gap-4 h-fit border border-zinc-800 bg-zinc-900 px-6 py-12  
+
+card-fade opacity-0 translate-y-8 transition-all duration-1000 ease-out">
+  <div class="flex flex-col gap-2 text-center">
+    <h3 class="text-xl font-bold text-zinc-300">{title}</h3>
+    <p class="text-6xl sm:text-5xl font-bold text-amber-300">{price}</p>
+  </div>
+  <p class="text-zinc-400 font-light text-md">{description}</p>
+  <ul>
+    {options.map((option) => (
+      <li class="text-zinc-300 font-normal text-md list-disc ml-4">{option}</li>
+    ))}
+  </ul>
+  <div>
+    {hasButton && <Button label={buttonLabel}/>}
+  </div>
+</div>
