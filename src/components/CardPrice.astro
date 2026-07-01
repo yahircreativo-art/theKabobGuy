@@ -27,7 +27,7 @@ card-fade opacity-0 translate-y-8 transition-all duration-1000 ease-out">
     <p class="text-6xl sm:text-5xl font-bold text-amber-300">{price}</p>
   </div>
   <p class="text-zinc-400 font-light text-md">{description}</p>
-  <ul>
+  <ul class="flex flex-col gap-4">
     {options.map((option) => (
       <li class="text-zinc-300 font-normal text-md list-disc ml-4">{option}</li>
     ))}
