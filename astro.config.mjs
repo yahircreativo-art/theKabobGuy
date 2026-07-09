@@ -5,7 +5,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
     site: 'https://yahircreativo-art.github.io',
-    base: '/theKabobGuy',
+    base: '/thekabobguy',
     vite: {
         plugins: [tailwindcss()],
     },

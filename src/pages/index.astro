@@ -7,14 +7,24 @@ import Prices from '../layouts/Prices.astro';
 
 const schema = {
   "@context": "https://schema.org",
-  "@type": "#",
-  name: "#",
-  url: "#",
-  logo: "#",
-  description: "#",  sameAs: [
-    "#",
-    "#"
-  ]
+  "@type": "Restaurant",
+  "name": "The Kabob Guy",
+  "url": "https://thekabobguy.com/",
+  "logo": "https://thekabobguy.com/favicon.svg",
+  "image": "https://thekabobguy.com/favicon.svg",
+  "description": "Mediterranean grill offering kabobs, fire-roasted plates, and Persian-inspired flavors in a modern dining experience.",
+  "telephone": "+1-555-578-5490",
+  "email": "info@thekabobguy.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1234 Fire Forged Way",
+    "addressLocality": "Cuisine District",
+    "addressRegion": "NY",
+    "postalCode": "10012",
+    "addressCountry": "US"
+  },
+  "servesCuisine": "Mediterranean",
+  "priceRange": "$$"
 };
 ---
 
