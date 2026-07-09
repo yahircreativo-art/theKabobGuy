@@ -1,0 +1,21 @@
+---
+import image1 from '../assets/slogan.png'
+import chefs from '../assets/chefs.jpeg'
+import seoImage from '../assets/card.webp'
+import CardAbout from '../components/CardAbout.astro'
+---
+<section class="flex justify-center min-h-screen">
+    <div class="container flex py-32 gap-64 w-11/12 items-center">
+        <CardAbout title='The Kabob Experience' subtitle='OUR GOALS & HISTORY' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labo et dolore magna aliqua. Ut enim ad mini veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.' image={{ src: image1.src, alt: 'image'}} button={{ href: 'h', label: 'Read more'}} imagePosition='top'/>
+    </div>
+</section>
+<section class="bg-zinc-950 flex justify-center min-h-screen">
+    <div class="container flex py-32 gap-64 w-11/12 items-center">
+        <CardAbout title='Chef’s' subtitle='ONLY THE FINEST FOOD & GREAT SERVICE ' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.' image={{ src: chefs.src, alt: 'image'}} imagePosition='bottom'/>
+    </div>
+</section>
+<section class="flex justify-center min-h-screen">
+    <div class="container flex py-32 gap-64 w-11/12 items-center">
+        <CardAbout title='The Kabob Experience' subtitle='OUR GOALS & HISTORY' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labo et dolore magna aliqua. Ut enim ad mini veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.' image={{ src: seoImage.src, alt: 'image'}} button={{ href: 'h', label: 'Read more'}} imagePosition='top'/>
+    </div>
+</section>
