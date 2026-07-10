@@ -1,0 +1,23 @@
+---
+import Image from '../components/Image.astro'
+import image1 from '../assets/chefs.jpeg'
+import image2 from '../assets/background.webp'
+---
+<section class="flex justify-center min-h-screen">
+    <div class="container max-w-6xl py-32 gap-8 w-11/12 ">
+        <div class="flex flex-col gap-4 text-center">
+            <span class="text-md font-medium underline underline-offset-10 text-amber-300">GALLERY</span>
+            <h2 class="text-white text-3xl font-medium">SOME EXPERIENCES</h2>
+            <p class="text-zinc-300 text-md">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+            <div class="grid sm:grid-cols-3 gap-4 sm:grid-rows-3 auto-rows-fr">
+                <Image image={{src:image1.src, alt:'hola'}} class:list={'sm:col-start-1 sm:col-end-2 sm:row-start-1 sm:row-end-2 h-full object-cover'}/>
+                <Image image={{src:image1.src, alt:'hola'}} class:list={'sm:col-start-2 sm:col-end-4'}/>
+                <Image image={{src:image2.src, alt:'hola'}} class:list={'sm:col-start-1 sm:col-end-2 sm:row-start-2 sm:row-end-3 h-full object-cover'}/>
+                <Image image={{src:image1.src, alt:'hola'}} class:list={'sm:col-start-2 sm:col-end-3 sm:row-start-2 sm:row-end-3 h-full object-cover'}/>
+                <Image image={{src:image2.src, alt:'hola'}} class:list={'sm:col-start-3 sm:col-end-4 sm:row-start-2 sm:row-end-4 h-full object-cover'}/>
+                <Image image={{src:image1.src, alt:'hola'}} class:list={'sm:col-start-1 sm:col-end-3 sm:row-start-3 sm:row-end-4 h-full object-cover'}/>
+            </div>
+        </div>
+    </div>
+</section>

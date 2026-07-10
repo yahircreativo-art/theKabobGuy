@@ -26,25 +26,25 @@ const {
 ---
     <div class="grid grid-cols-1 sm:grid-cols-5 gap-8">
     {imagePosition === 'top' && image && (
-        <div class="col-span-3 my-auto">
+        <div class="sm:col-span-3 my-auto">
             <img
                 src={image.src}
                 alt={image.alt}
                 class="w-full h-auto"/>
         </div>
     )}
-        <div class="col-span-2 flex flex-col gap-4">
-            <h2 class="text-4xl font-semibold text-white">{title}</h2>
+        <div class="sm:col-span-2 flex flex-col gap-4 justify-center">
+            <h2 class="text-4xl sm:text-5xl font-semibold text-white">{title}</h2>
             <h3 class="text-amber-300 underline">{subtitle}</h3>
             <p class="text-zinc-200">{description}</p>
-            <div class="sm:flex w-fit">
+            <div class="sm:flex sm:w-fit">
             {button && (
                 <Button label={button.label} href={button.href} />
             )}
             </div>
         </div>
     {imagePosition === 'bottom' && image && (
-        <div class="col-span-3 my-auto">
+        <div class="sm:col-span-3 my-auto">
             <img
                 src={image.src}
                 alt={image.alt}

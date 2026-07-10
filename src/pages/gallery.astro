@@ -1,12 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import AboutSection1 from '../layouts/About-section.astro';
 import Gallery from '../layouts/Gallery.astro';
 const schema = {
   "@context": "https://schema.org",
   "@type": "AboutPage",
   "mainEntityOfPage": "#",
-  "name": "About",
+  "name": "Gallery",
   "url": "#",
   "description": "Discover the story behind The Kabob Guy, a Mediterranean-inspired restaurant serving flame-grilled kabobs and bold Persian flavors.",
   "image": "#",
@@ -21,6 +20,6 @@ const schema = {
 };
 ---
 
-<Layout title="The kabob guy" description="The kabob guy | About" canonical="/about" schema={schema}>
-  <AboutSection1 />
+<Layout title="The kabob guy" description="The kabob guy | About" canonical="/gallery" schema={schema}>
+  <Gallery />
 </Layout>

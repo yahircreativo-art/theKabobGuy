@@ -7,7 +7,7 @@ import logoWeb from '../assets/logoWeb.png'
     <nav>
         <input id="nav-toggle" type="checkbox" class="peer sr-only" />
 
-        <div class="container max-w-6xl mx-auto flex items-center justify-between px-4 py-4">
+        <div class="container max-w-6xl mx-auto flex items-center justify-between py-4 w-11/12">
             <a href="/theKabobGuy" class="flex items-center">
                 <img src={logoWeb.src} alt="The Kabob Guy Logo" class="h-10 w-auto" />
             </a>
@@ -22,20 +22,20 @@ import logoWeb from '../assets/logoWeb.png'
             </div>
 
             <ul class="hidden items-center gap-4 md:flex">
-                <li><a href="/theKabobGuy/menu" class="text-zinc-50 hover:text-amber-300">Menu</a></li>
+                <li><a href="/theKabobGuy" class="text-zinc-50 hover:text-amber-300">Home</a></li>
                 <li><a href="/theKabobGuy/about" class="text-zinc-50 hover:text-amber-300">About</a></li>
-                <li><a href="/contacto" class="text-zinc-50 hover:text-amber-300">Gallery</a></li>
-                <li><a href="/contacto" class="text-zinc-50 hover:text-amber-300">Reservations</a></li>
+                <li><a href="/theKabobGuy/menu" class="text-zinc-50 hover:text-amber-300">Menu</a></li>
+                <li><a href="/theKabobGuy/gallery" class="text-zinc-50 hover:text-amber-300">Gallery</a></li>
                 <Button label="Contact" href="/contact" />
             </ul>
         </div>
 
         <div class="absolute inset-x-0 top-full z-40 block overflow-hidden max-h-0 opacity-0 scale-y-95 bg-black/60 px-4 py-0 transition-[max-height,opacity,transform] duration-300 ease-out md:hidden peer-checked:max-h-[20rem] peer-checked:opacity-100 peer-checked:scale-y-100 peer-checked:py-4">
             <ul class="flex flex-col gap-3">
-                <li><a href="/theKabobGuy/menu" class="block rounded-lg px-3 py-2 text-zinc-50 hover:bg-zinc-950/40 hover:text-amber-300">Menu</a></li>
+                <li><a href="/theKabobGuy" class="block rounded-lg px-3 py-2 text-zinc-50 hover:bg-zinc-950/40 hover:text-amber-300">Home</a></li>
                 <li><a href="/theKabobGuy/about" class="block rounded-lg px-3 py-2 text-zinc-50 hover:bg-zinc-950/40 hover:text-amber-300">About</a></li>
-                <li><a href="/contacto" class="block rounded-lg px-3 py-2 text-zinc-50 hover:bg-zinc-950/40 hover:text-amber-300">Gallery</a></li>
-                <li><a href="/contacto" class="block rounded-lg px-3 py-2 text-zinc-50 hover:bg-zinc-950/40 hover:text-amber-300">Reservations</a></li>
+                <li><a href="/theKabobGuy/menu" class="block rounded-lg px-3 py-2 text-zinc-50 hover:bg-zinc-950/40 hover:text-amber-300">Menu</a></li>
+                <li><a href="/theKabobGuy/gallery" class="block rounded-lg px-3 py-2 text-zinc-50 hover:bg-zinc-950/40 hover:text-amber-300">Gallery</a></li>
                 <li><Button label="Contact" href="/contact" /> </li>
             </ul>
         </div>
