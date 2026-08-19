@@ -4,8 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 
 export default defineConfig({
-    site: 'https://yahircreativo-art.github.io',
-    base: '/theKabobGuy',
+    site: 'https://thekabobguy.vercel.app',
     vite: {
         plugins: [tailwindcss()],
     },
