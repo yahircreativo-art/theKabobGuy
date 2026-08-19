@@ -1,7 +1,11 @@
 ---
 import Image from '../components/Image.astro'
 import image1 from '../assets/chefs.jpeg'
-import image2 from '../assets/background.webp'
+import image2 from '../assets/image2.webp'
+import image3 from '../assets/image3.webp'
+import image4 from '../assets/image4.webp'
+import image5 from '../assets/image5.webp'
+import image6 from '../assets/background.webp'
 ---
 <section class="flex justify-center min-h-screen">
     <div class="container max-w-6xl py-32 gap-8 w-11/12 ">
@@ -12,11 +16,11 @@ import image2 from '../assets/background.webp'
             </p>
             <div class="grid sm:grid-cols-3 gap-4 sm:grid-rows-3 auto-rows-fr">
                 <Image image={{src:image1.src, alt:'hola'}} class:list={'sm:col-start-1 sm:col-end-2 sm:row-start-1 sm:row-end-2 h-full object-cover'}/>
-                <Image image={{src:image1.src, alt:'hola'}} class:list={'sm:col-start-2 sm:col-end-4'}/>
-                <Image image={{src:image2.src, alt:'hola'}} class:list={'sm:col-start-1 sm:col-end-2 sm:row-start-2 sm:row-end-3 h-full object-cover'}/>
-                <Image image={{src:image1.src, alt:'hola'}} class:list={'sm:col-start-2 sm:col-end-3 sm:row-start-2 sm:row-end-3 h-full object-cover'}/>
-                <Image image={{src:image2.src, alt:'hola'}} class:list={'sm:col-start-3 sm:col-end-4 sm:row-start-2 sm:row-end-4 h-full object-cover'}/>
-                <Image image={{src:image1.src, alt:'hola'}} class:list={'sm:col-start-1 sm:col-end-3 sm:row-start-3 sm:row-end-4 h-full object-cover'}/>
+                <Image image={{src:image2.src, alt:'hola'}} class:list={'sm:col-start-2 sm:col-end-4'}/>
+                <Image image={{src:image3.src, alt:'hola'}} class:list={'sm:col-start-1 sm:col-end-2 sm:row-start-2 sm:row-end-3 h-full object-cover'}/>
+                <Image image={{src:image4.src, alt:'hola'}} class:list={'sm:col-start-2 sm:col-end-3 sm:row-start-2 sm:row-end-3 h-full object-cover'}/>
+                <Image image={{src:image5.src, alt:'hola'}} class:list={'sm:col-start-3 sm:col-end-4 sm:row-start-2 sm:row-end-4 h-full object-cover'}/>
+                <Image image={{src:image6.src, alt:'hola'}} class:list={'sm:col-start-1 sm:col-end-3 sm:row-start-3 sm:row-end-4 h-full object-cover'}/>
             </div>
         </div>
     </div>
