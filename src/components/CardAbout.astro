@@ -24,9 +24,9 @@ const {
     imagePosition = 'top'
 } = Astro.props;
 ---
-    <div class="container w-11/12 max-w-6xl grid grid-cols-1 sm:grid-cols-5 gap-8">
+    <div class="container w-11/12 max-w-6xl grid grid-cols-1 grid-rows-auto md:grid-rows-1 md:grid-cols-5 gap-8 my-auto auto-rows-auto">
     {imagePosition === 'top' && image && (
-        <div class="sm:col-span-3 my-auto">
+        <div class="sm:col-span-3">
             <img
                 src={image.src}
                 alt={image.alt}
@@ -37,18 +37,14 @@ const {
             <h2 class="text-4xl sm:text-5xl font-semibold text-white">{title}</h2>
             {subtitle && <h3 class="text-amber-300 underline">{subtitle}</h3>}
             <p class="text-zinc-200">{description}</p>
-            <div class="sm:flex sm:w-fit">
-            {button && (
-                <Button label={button.label} href={button.href} />
-            )}
-            </div>
+            
         </div>
     {imagePosition === 'bottom' && image && (
-        <div class="sm:col-span-3 my-auto">
+        <div class="sm:col-span-3">
             <img
                 src={image.src}
                 alt={image.alt}
-                class="w-auto h-auto"/>
+                class="w-full h-auto"/>
         </div>
     )}
     </div>
