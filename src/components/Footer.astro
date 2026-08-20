@@ -8,8 +8,23 @@ import logo from '../assets/logo.webp'
         <img src={logo.src} alt="The Kabob Guy Logo" class="h-auto w-auto max-w-60 mx-auto" />
         <span class="font-semibold text-lg">CONTACT</span>
         
-        <a href="tel:+16612997755" class="underline">+1 (661) 299-7755</a>
-        <a href="mailto:info@thekabobguy.com" class="text-amber-300 font-semibold underline">info@thekabobguy.com</a>
+        
+        <div class="flex mt-2 gap-2">
+            <span>Email:</span>
+            <a href="tel:+16612997755" class="text-amber-300 font-semibold underline hover:text-amber-400">+1 (661) 299-7755</a>
+        </div>
+
+        <div class="flex mt-2 gap-2">
+            <span>Email:</span>
+            <a href="mailto:info@thekabobguy.com" class="text-amber-300 font-semibold hover:text-amber-400 underline">info@thekabobguy.com</a>
+        </div>
+        
+        <div class="flex mt-2 gap-2">
+            <span>Instagram:</span>
+            
+            <a href="#" target="_blank" rel="noopener noreferrer" class="font-semibold text-amber-300 hover:text-amber-400 underline transition-colors" aria-label="Instagram">@thekabobguy
+            </a>
+        </div>
     </div>
 </section>
 <section style={`background-image: url(${backgroundImage.src});`} class="bg-cover bg-center bg-no-repeat h-50 border-t border-zinc-900">
