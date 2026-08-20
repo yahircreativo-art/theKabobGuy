@@ -35,7 +35,7 @@ const {
     )}
         <div class="sm:col-span-2 flex flex-col gap-4 justify-center">
             <h2 class="text-4xl sm:text-5xl font-semibold text-white">{title}</h2>
-            <h3 class="text-amber-300 underline">{subtitle}</h3>
+            {subtitle && <h3 class="text-amber-300 underline">{subtitle}</h3>}
             <p class="text-zinc-200">{description}</p>
             <div class="sm:flex sm:w-fit">
             {button && (
