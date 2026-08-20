@@ -24,7 +24,7 @@ const {
     imagePosition = 'top'
 } = Astro.props;
 ---
-    <div class="grid grid-cols-1 sm:grid-cols-5 gap-8">
+    <div class="container w-11/12 max-w-6xl grid grid-cols-1 sm:grid-cols-5 gap-8">
     {imagePosition === 'top' && image && (
         <div class="sm:col-span-3 my-auto">
             <img
