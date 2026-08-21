@@ -1,6 +1,5 @@
 ---
 import image1 from '../assets/slogan.png'
-import chefs from '../assets/chefs.jpeg'
 import CardAbout from '../components/CardAbout.astro'
 import image2 from '../assets/image2.webp'
 import image3 from '../assets/image3.webp'
@@ -8,11 +7,15 @@ import image4 from '../assets/image4.webp'
 import image5 from '../assets/image5.webp'
 import image6 from '../assets/image6.webp'
 import chef from '../assets/chef.webp'
+import chef2 from '../assets/chef2.webp'
 ---
 <section class="flex justify-center w-full min-h-screen pt-28">
         <CardAbout title='Chef Pat Minassian' subtitle='Our Goals & History' description='Chef Pat Minassian brings more than two decades of culinary experience, leadership, and passion to the kitchen, with a career spanning luxury hospitality, banquet service, high-volume restaurant operations, and entrepreneurship.' image={{ src: chef.src, alt: 'image'}} imagePosition='top'/>
 </section>
 
+<section class="bg-zinc-950 flex justify-center w-full min-h-screen">
+        <CardAbout title='"Taste of town montebello" six years in a row for best appetizer and entree' image={{ src: chef2.src, alt: 'image'}} imagePosition='bottom'/>
+</section>
 <section class="bg-zinc-950 flex justify-center w-full min-h-screen">
         <CardAbout title='From Culinary School to the Marriott' subtitle='1998-2001' description='After graduating from culinary school in 1998 with the program’s highest degree, Chef Pat began his professional career at the Marriott in Armenia, where he served as a Banquet Sous Chef until 2001.' image={{ src: image1.src, alt: 'image'}} imagePosition='bottom'/>
 </section>
