@@ -8,8 +8,14 @@ import image5 from '../assets/image5.webp'
 import image6 from '../assets/image6.webp'
 import chef from '../assets/chef.webp'
 import chef2 from '../assets/chef2.webp'
+import slogan from '../assets/slogan.png'
 ---
-<section class="flex justify-center w-full min-h-screen pt-28">
+<section class="flex justify-center w-full pt-28">
+        <div class="container flex justify-center items-center max-w-6xl w-11/12">
+                <img src={slogan.src} alt="slogan taste of the mediterranean">
+        </div>
+</section>
+<section class="flex justify-center w-full pb-28">
         <CardAbout title='Chef Pat Minassian' subtitle='Our Goals & History' description='Chef Pat Minassian brings more than two decades of culinary experience, leadership, and passion to the kitchen, with a career spanning luxury hospitality, banquet service, high-volume restaurant operations, and entrepreneurship.' image={{ src: chef.src, alt: 'image'}} imagePosition='top'/>
 </section>
 
