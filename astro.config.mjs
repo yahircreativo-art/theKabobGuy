@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 
 export default defineConfig({
-    base: /theKabobGuy/,
+    base: '/theKabobGuy/',
     site: 'https://thekabobguy.com',    
     vite: {
         plugins: [tailwindcss()],
