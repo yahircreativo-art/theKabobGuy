@@ -1,6 +1,20 @@
 ---
 import Button from './Button.astro';
 import logoWeb from '../assets/logo.webp'
+
+const pathname = Astro.url.pathname;
+
+const links = [
+    { label: 'Home', href: '/' },
+    { label: 'About Us', href: '/about' },
+    { label: 'Menu', href: '/menu' },
+    { label: 'Gallery', href: '/gallery' },
+];
+
+function isActive(href: string): boolean {
+    if (href === '/') return pathname === '/';
+    return pathname.startsWith(href);
+}
 ---
 
 <header class="fixed w-full top-0 z-50 bg-black/60 backdrop-blur-sm">
@@ -21,21 +35,43 @@ import logoWeb from '../assets/logo.webp'
             </div>
 
             <ul class="hidden items-center gap-4 md:flex">
-                <li><a href="/" class="text-zinc-50 hover:text-amber-300">Home</a></li>
-                <li><a href="/about" class="text-zinc-50 hover:text-amber-300">About Us</a></li>
-                <li><a href="/menu" class="text-zinc-50 hover:text-amber-300">Menu</a></li>
-                <li><a href="/gallery" class="text-zinc-50 hover:text-amber-300">Gallery</a></li>
+                {links.map(({ label, href }) => (
+                    <li>
+                        <a
+                            href={href}
+                            class:list={[
+                                'hover:text-amber-300 transition-colors',
+                                isActive(href) ? 'text-amber-300 font-medium' : 'text-zinc-50',
+                            ]}
+                        >
+                            {label}
+                        </a>
+                    </li>
+                ))}
                 <Button label="Contact" href="/contact" />
             </ul>
         </div>
 
         <div class="absolute inset-x-0 top-full z-40 block overflow-hidden max-h-0 opacity-0 scale-y-95 bg-black/60 px-4 py-0 transition-[max-height,opacity,transform] duration-300 ease-out md:hidden peer-checked:max-h-[20rem] peer-checked:opacity-100 peer-checked:scale-y-100 peer-checked:py-4">
             <ul class="flex flex-col gap-3">
-                <li><a href="/" class="block rounded-lg px-3 py-2 text-zinc-50 hover:bg-zinc-950/40 hover:text-amber-300">Home</a></li>
-                <li><a href="/about" class="block rounded-lg px-3 py-2 text-zinc-50 hover:bg-zinc-950/40 hover:text-amber-300">About Us</a></li>
-                <li><a href="/menu" class="block rounded-lg px-3 py-2 text-zinc-50 hover:bg-zinc-950/40 hover:text-amber-300">Menu</a></li>
-                <li><a href="/gallery" class="block rounded-lg px-3 py-2 text-zinc-50 hover:bg-zinc-950/40 hover:text-amber-300">Gallery</a></li>
-                <li><a href="tel:+16612997755" class="block rounded-lg px-3 py-2 text-zinc-50 hover:bg-zinc-950/40 hover:text-amber-300">Contact</a></li>
+                {links.map(({ label, href }) => (
+                    <li>
+                        <a
+                            href={href}
+                            class:list={[
+                                'block rounded-lg px-3 py-2 transition-colors',
+                                isActive(href)
+                                    ? 'text-amber-300 bg-zinc-950/40 font-medium'
+                                    : 'text-zinc-50 hover:bg-zinc-950/40 hover:text-amber-300',
+                            ]}
+                        >
+                            {label}
+                        </a>
+                    </li>
+                ))}
+                <li>
+                    <a href="tel:+16612997755" class="block rounded-lg px-3 py-2 text-zinc-50 hover:bg-zinc-950/40 hover:text-amber-300">Contact</a>
+                </li>
             </ul>
         </div>
     </nav>

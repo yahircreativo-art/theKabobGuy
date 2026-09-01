@@ -1,7 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import AboutSection1 from '../layouts/About-section.astro';
-import MenuSection from '../layouts/Menu-section.astro';
+import MenuSection from '../components/MenuSection.astro';
 
 const schema = {
   "@context": "https://schema.org",
@@ -23,5 +22,5 @@ const schema = {
 ---
 
 <Layout title="The kabob guy" description="The kabob guy | Menu" canonical="/menu" schema={schema}>
-  <MenuSection />
+  <MenuSection title="MENU" extraClass="mt-10" />
 </Layout>

@@ -1,0 +1,46 @@
+---
+import CardAbout from './CardAbout.astro';
+import aboutData from '../data/about-data.json';
+
+import slogan from '../assets/slogan.png';
+import greekSalad from '../assets/greek-salad.webp';
+import beefLule from '../assets/beef-lule.webp';
+import chickenBreast from '../assets/chicken-breast.webp';
+import chickenLule from '../assets/chicken-lule.webp';
+import beefKabob from '../assets/beef-kabob.webp';
+import chef from '../assets/chef.webp';
+import chef2 from '../assets/chef2.webp';
+
+const images: Record<string, { src: string; alt: string }> = {
+  chef: { src: chef.src, alt: 'Chef Pat Minassian' },
+  chef2: { src: chef2.src, alt: 'Chef Pat Minassian' },
+  slogan: { src: slogan.src, alt: 'Taste of the Mediterranean' },
+  'greek-salad': { src: greekSalad.src, alt: 'The Kabob Guy' },
+  'beef-lule': { src: beefLule.src, alt: 'Building a Culinary Career' },
+  'chicken-breast': { src: chickenBreast.src, alt: 'Leadership & Kitchen Excellence' },
+  'chicken-lule': { src: chickenLule.src, alt: 'Opening Hye Cuisine' },
+  'beef-kabob': { src: beefKabob.src, alt: 'A New Chapter in Bakersfield' },
+};
+---
+
+<section class="flex justify-center w-full pt-28">
+    <div class="container flex justify-center items-center max-w-6xl w-11/12">
+        <img src={slogan.src} alt="Taste of the Mediterranean" />
+    </div>
+</section>
+
+{aboutData.map((item) => (
+    <section class:list={[
+        'flex justify-center w-full',
+        item.isIntro ? 'pb-28' : 'min-h-screen',
+        item.imagePosition === 'bottom' ? 'bg-zinc-950' : '',
+    ]}>
+        <CardAbout
+            title={item.title}
+            subtitle={item.subtitle}
+            description={item.description}
+            image={images[item.image]}
+            imagePosition={item.imagePosition}
+        />
+    </section>
+))}

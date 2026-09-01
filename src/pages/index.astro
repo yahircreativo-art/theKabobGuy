@@ -1,9 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import Hero from '../layouts/Hero.astro';
-import About from '../layouts/About.astro';
-import Menu from '../layouts/Menu.astro';
-import Prices from '../layouts/Prices.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import MenuSection from '../components/MenuSection.astro';
 
 const schema = {
   "@context": "https://schema.org",
@@ -31,6 +30,5 @@ const schema = {
 <Layout title="The kabob guy" description="The kabob guy | taste of the mediterranean" canonical="/" schema={schema}>
   <Hero />
   <About />
-  <Menu />
+  <MenuSection title="The Fire-Forged Collection" subtitle="Signatura skewers crafted for the discerning palate." />
 </Layout>
-

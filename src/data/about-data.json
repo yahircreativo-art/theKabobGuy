@@ -1,0 +1,57 @@
+[
+  {
+    "title": "Chef Pat Minassian",
+    "subtitle": "Our Goals & History",
+    "description": "Chef Pat Minassian brings more than two decades of culinary experience, leadership, and passion to the kitchen, with a career spanning luxury hospitality, banquet service, high-volume restaurant operations, and entrepreneurship.",
+    "image": "chef",
+    "imagePosition": "top",
+    "isIntro": true
+  },
+  {
+    "title": "\"Taste of town montebello\" six years in a row for best appetizer and entree",
+    "image": "chef2",
+    "imagePosition": "bottom"
+  },
+  {
+    "title": "From Culinary School to the Marriott",
+    "subtitle": "1998-2001",
+    "description": "After graduating from culinary school in 1998 with the program's highest degree, Chef Pat began his professional career at the Marriott in Armenia, where he served as a Banquet Sous Chef until 2001.",
+    "image": "slogan",
+    "imagePosition": "bottom"
+  },
+  {
+    "title": "Building a Culinary Career in the U.S.",
+    "subtitle": "2001-2004",
+    "description": "In 2001, Chef Pat moved to the United States and continued building his culinary career as Head Chef at New York New York Banquet Hall, a position he held until 2004. He then joined Commerce Casino as a California Kitchen Shift Supervisor, further developing his expertise in high-volume food service and kitchen operations.",
+    "image": "beef-lule",
+    "imagePosition": "top"
+  },
+  {
+    "title": "Leadership & Kitchen Excellence",
+    "subtitle": "2007-2010",
+    "description": "In 2007, Chef Pat joined MIM Entertainment Group as Executive Chef of Dillons Irish Restaurant & Bar in Chino Hills, California. In this leadership role, he managed a kitchen staff of approximately 60 employees while overseeing all aspects of culinary operations, including menu execution, food quality, kitchen efficiency, and staff management.",
+    "image": "chicken-breast",
+    "imagePosition": "bottom"
+  },
+  {
+    "title": "Opening Hye Cuisine",
+    "subtitle": "2013",
+    "description": "Driven by his passion for Mediterranean cuisine and a desire to create something of his own, Chef Pat opened Hye Cuisine Mediterranean Restaurant in Montebello, California, in December 2013. For nearly a decade, he poured his culinary experience into the restaurant, building a loyal following around flavorful Mediterranean dishes, quality ingredients, and recipes prepared with care.",
+    "image": "chicken-lule",
+    "imagePosition": "top"
+  },
+  {
+    "title": "A New Chapter in Bakersfield",
+    "subtitle": "2022",
+    "description": "In 2022, Chef Pat closed the restaurant and relocated to Bakersfield, California, beginning a new chapter for himself and his family. But his passion for cooking—and for sharing the food that had become such an important part of his career—never left him.",
+    "image": "beef-kabob",
+    "imagePosition": "bottom"
+  },
+  {
+    "title": "The Kabob Guy",
+    "subtitle": "2026",
+    "description": "In 2026, Chef Pat returned to the kitchen with a fresh concept: The Kabob Guy, a food truck created to bring his signature Mediterranean flavors to the Bakersfield community in a more casual and accessible way. Drawing on more than 25 years of professional culinary experience, The Kabob Guy represents the next evolution of Chef Pat's journey—combining years of tradition, experience, and entrepreneurship with food made fresh and served with heart. For Chef Pat, The Kabob Guy isn't simply a new business—it's the continuation of a culinary journey that began more than two decades ago.",
+    "image": "greek-salad",
+    "imagePosition": "top"
+  }
+]

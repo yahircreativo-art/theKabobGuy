@@ -1,0 +1,51 @@
+---
+import Card from './Card.astro';
+import menuData from '../data/menu-data.json';
+import hummusPita from '../assets/hummus-pita.webp';
+import greekSalad from '../assets/greek-salad.webp';
+import beefLule from '../assets/beef-lule.webp';
+import chickenBreast from '../assets/chicken-breast.webp';
+import chickenLule from '../assets/chicken-lule.webp';
+import beefKabob from '../assets/beef-kabob.webp';
+
+const images: Record<string, { src: string; alt: string }> = {
+  'hummus-pita': { src: hummusPita.src, alt: 'Hummus and pita chips' },
+  'greek-salad': { src: greekSalad.src, alt: 'Greek salad' },
+  'beef-lule': { src: beefLule.src, alt: 'Beef lule plate' },
+  'chicken-breast': { src: chickenBreast.src, alt: 'Chicken breast plate' },
+  'chicken-lule': { src: chickenLule.src, alt: 'Chicken lule plate' },
+  'beef-kabob': { src: beefKabob.src, alt: 'Beef kabob plate' },
+};
+
+interface Props {
+    title?: string;
+    subtitle?: string;
+    extraClass?: string;
+}
+
+const {
+    title = 'MENU',
+    subtitle,
+    extraClass = ''
+} = Astro.props;
+---
+
+<section class:list={["flex flex-col bg-zinc-950 justify-center py-32", extraClass]}>
+    <div class="container flex flex-col w-11/12 max-w-6xl gap-8 mx-auto">
+        <div class="flex flex-col gap-4">
+            <h2 class="text-center text-3xl font-medium text-zinc-50">{title}</h2>
+            {subtitle && <p class="text-center text-zinc-300">{subtitle}</p>}
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {menuData.map((item) => (
+                <Card
+                    title={item.title}
+                    price={item.price}
+                    description={item.description}
+                    backgroundImage={images[item.image]}
+                />
+            ))}
+        </div>
+    </div>
+</section>
