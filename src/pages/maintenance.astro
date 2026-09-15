@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Maintenance — The Kabob Guy" description="This website is temporarily on hold." canonical="/maintenance" minimal>
+  <main class="relative min-h-screen overflow-hidden bg-black text-zinc-50">
+    <div class="absolute inset-0 bg-gradient-to-b from-black via-black/80 to-black"></div>
+
+    <div class="relative z-10 mx-auto flex min-h-screen max-w-6xl flex-col items-center justify-center gap-6 px-6 py-20 text-center">
+      <p class="text-sm uppercase tracking-[0.5rem] text-amber-300">Under Maintenance</p>
+
+      <h1 class="text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
+        We're Taking a Quick Pause
+      </h1>
+
+      <p class="max-w-xl text-base text-zinc-300 md:text-lg">
+        Hey there! This website is temporarily on hold.
+      </p>
+    </div>
+  </main>
+</Layout>
